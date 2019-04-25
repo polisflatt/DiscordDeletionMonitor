@@ -25,8 +25,8 @@ whitelist = {
 
 auto_signin = True # Be careful with this option. If others see it, you may be f**ked!
 auto_signin_credentials = {
-    "email": "naam@europe.com",
-    "password": "33133313"
+    "email": "",
+    "password": ""
 }
 
 # Additionally, you may want to actually load from a text file instead. Try this->
