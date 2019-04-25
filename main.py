@@ -13,7 +13,7 @@ from functions import *
 #Audio
 import pygame
 
-exec(open("conf.py").read()) # Read the configuration file. (Extremely lazy way to implement the notion of a configuration file. I could have used something else, but why not just interpret a Python file with its variables and then just use those as options and settings? Lazy but very intricate and resourceful.)
+exec(open("conf.py").read()) # Lazy way of implementing configuration files.
 # Also didn't close my reading. Bad practice, but who cares?
 
 
@@ -21,7 +21,7 @@ if (not os.path.exists("logs/")):
     os.mkdir("logs/")
 
 if (whitelist_mode == True and blacklist_mode == True):
-    print("To have whitelistmode and blacklistmode on simultaneously is a logical contradiction--and it cannot happen! Change your configuration file! Exiting...")
+    print("You cannot have whitelist mode and blacklist mode enabled at the same time. Change your configuration file. Exiting...")
     exit(1)
 
 if (sound_on):
@@ -95,6 +95,6 @@ if (auto_signin):
     client.run(auto_signin_credentials["email"], auto_signin_credentials["password"])
 else:
     client.run(sys.argv[1], sys.argv[2]) # Utilize the arguments as they shall be used.
-# Rather, near 80 lines; it was lower than I had expected but it is not too discrediting to what I said as it is relatively close to the integer I had proclaimed was the datum in context.
+
 
 # x lines!
